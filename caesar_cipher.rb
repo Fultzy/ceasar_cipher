@@ -12,7 +12,6 @@ def user_input
   @message = String.new
 end
 
-#Add elsif for symbles and numbers?
 def caesar_cipher(string)
   counter = 0
   p string
