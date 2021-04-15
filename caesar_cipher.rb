@@ -27,7 +27,7 @@ def caesar_cipher(string)
 
       #lowercase letter
       elsif letter == letter.downcase
-        letterIndex = @alpha.index(letter.upcase)
+        letterIndex = @alpha.index(letter.downcase)
           newWord.push(offsetr5000(letterIndex,0))
 
       #symbols
