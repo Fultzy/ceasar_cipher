@@ -17,7 +17,7 @@ class Cipher
     puts ' input message...'
     @input = 'Hello World'
     puts ' input encryption offset...'
-    @offset = 25
+    @offset = 4
     15.times { print '~~' }
     puts ' '
   end
@@ -62,7 +62,6 @@ class Cipher
 
   ########
   def word_inator(array)
-    puts "word: #{array}"
     word = String.new
     array.each do |num|
       # uppercase
@@ -75,25 +74,25 @@ class Cipher
         word.concat(num == 26 ? 'z' : @alpha[num].downcase)
       end
     end
-    @message.concat(" #{word}")
+    @message.concat("#{word} ")
   end
 
   ########
   def display
     15.times { print '~~' }
     puts ' '
-    puts " output message: #{@message}"
-    puts " offset Factor: #{@offset}"
+    puts " Output message: #{@message}"
+    puts " Offset Factor: #{@offset}"
     15.times { print '~~' }
     puts ' '
   end
 end
 
-cipher = Cipher.new
-cipher.user_input
+# cipher = Cipher.new
+# cipher.user_input
 
-puts " Message: #{cipher.input}"
-puts " Offset: #{cipher.offset}"
+# puts " Input Message: #{cipher.input}"
+# puts " Offset Factor: #{cipher.offset}"
 
-cipher.caesar_cipher(cipher.input)
-cipher.display
+# cipher.caesar_cipher(cipher.input)
+# cipher.display
